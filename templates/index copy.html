@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Default Title{% endblock %}</title>
+    <link rel="stylesheet" type=text/css href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <div class="nav">
+        <div class="nvbtn"><a href="">Home</a></div>
+        <div class="nvbtn"><a href="">FAQs</a></div>
+          <div class="nvbtn"><a href="">Changelog</a></div>
+        <div class="nvbtn"><a href="">Contact</a></div>
+      </div>
+      <div class="body">
+        <div class="side"></div>
+        <div class="action">
+            <div class="toptitle">Youtube Downloader</div>
+            <div class="downloader">
+      <div class="textdownloader">
+                  <p class="text">This website was made so we can download the music and videos from youtube.
+            <br>
+          Its free to use forever and no ads, I maintain this website running based on the support I receive from the community, please consider buying me a <b>cup of coffee :)</b></p>
+        <br>
+      </div> <!-- textdownloader        -->
+      
+      <div class="formdownloader">
+             <form action="#" method="post">
+               <div class="submitbox">
+          <p><input type="text" name="url" class="searchfield" placeholder="Enter the video URL here" /> </p>
+          <p><input type="submit" value="Convert" class="sendbtn"/> </p>
+              </div>  <!--          submitbox -->
+          </form>
+      </div>    <!--         formdownloader -->
+            </div><!-- downloader -->
+          <div class="aboutmp3">
+        <h1>About MP3</h1>
+            <p>
+              Downloading YouTube videos as MP3 is a need for every person these days. It gives you the freedom to listen to your favorite music, podcasts, tutorials, inspirational, and motivational speeches on the go. You can listen to your downloaded MP3 files when you don't have access to the internet or on devices that do not support video content, like MP3 players.
+      <br><br>
+      EzMP3 is a YouTube to MP3 Converter that allows you to convert your favorite videos to MP3 for free. The best part is, this website is entirely ad-free and runs on donations received from users. Unlike others, you won't see any garbage, spam, or pop-up ads on this website. Convert as many YouTube videos as you want, there is no limit.
+            </p>
+      </div> <!--     aboutmp3 -->
+          
+        <div class="footer">
+        <div class="feet logo"><p>© 2024 CyberSamurai.  All rights reserved.</p>
+          
+        </div> <!--     footer logo -->
+      <div class="footerlinks">
+             <div class="feet"><a href="">Contact</a></div>
+          <div class="feet"><a href="">Copyright</a></div>
+          <div class="feet"><a href="">Terms</a></div>
+          <div class="feet"><a href="">Privacy</a></div>
+      </div>
+      </div>  <!--     footer -->
+          
+        </div> <!--   action -->
+        
+         <div class="side"></div>
+      </div>
+       
+</body>
+</html>

@@ -1,0 +1,158 @@
+:root{
+    --color1:#fb966b;
+    --bgcolor:#f6f6f6;
+    --brown:#572f2f;
+    --red1:#e41223;
+    --red2:#972c2f
+  
+  }
+  *{
+    padding:0px;
+    margin:0px;
+    font-family:consolas;
+  }
+  body{
+    background-color:var(--bgcolor);
+  }
+  .nav{
+    display:flex;
+    flex-wrap:no-wrap;
+    flex-direction:row;
+    background-color:var(--bgcolor);
+    justify-content:center;
+  }
+  .nvbtn{
+   font-size:20px;
+    font-family: Consolas, sans-serif; /* Font family */
+   padding:20px 20px 50px 20px;
+  }
+  
+  .body{
+    border:5px solid, var(--primary-color);
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    height:400px;
+  }
+  .side{
+  /*   border:3px, solid var(--brown); */
+    flex-grow:1;
+    max-width:50%;
+  }
+  .action{
+    display: flex;             
+    justify-content: center;     
+    align-items: center;        
+    flex-grow: 1;
+    max-width: 50%;
+    flex-direction:column;
+    background-color:var(--bgcolor);
+  /*   filter: drop-shadow(0 0 0.75rem red); */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.22);
+  }
+  .toptitle{
+    font-size:2.4em;
+    color:var(--brown);
+  }
+  .downloader{
+    display:flex;
+     flex-wrap:wrap;
+    flex-direction:row;
+    justify-content:center;
+    align-content:center;
+  /*   border:2px solid gold; */
+  }
+  .textdownloader{
+    padding:20px;
+    line-height:22px;
+  }
+  .submitbox{
+    display:flex;
+     flex-wrap:wrap;
+    flex-direction:row;
+  }
+  
+  .searchfield{
+    background-color:white; /* Button background color */
+    color: white; /* Text color */
+    border: 1px solid var(--brown); /* Remove border */
+    padding: 12px 24px; /* Padding for the button */
+    margin-right:10px;
+    font-size: 16px; /* Font size */
+    border-radius: 6px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    width:400px;
+  }
+  
+  .searchfield:hover {
+    background-color: #edacbb; /* Hover background color */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Elevate shadow on hover */
+  /*   transform: translateY(-2px);  */
+  }
+  
+  .searchfield:active {
+    transform: translateY(0); /* Button returns to original position on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slightly reduce shadow on click */
+  }
+  .sendbtn{
+    background-color: var(--brown); /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer on hover */
+    padding: 12px 24px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    border-radius: 6px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transition on hover */
+  }
+  
+  .sendbtn:hover{
+     background-color: var(--red2); /* Button background color */
+  }
+  
+  .aboutmp3{
+    justify-content:center;
+    align-content:center;
+    text-align:center;
+    padding:30px 50px;
+  }
+  .aboutmp3 h1{
+    font-size:1.3em;
+    color:var(--brown);
+  }
+  
+  .footer{
+    display:flex;
+    background-color:var(--bgcolor);
+    margin:0px!important;
+    padding:0px!important;
+    justify-content:space-between;
+    width:100%;
+  /*    border:2px solid blue; */
+  }
+  .logo{
+    flex-grow:3;
+  }
+  footerlinks{
+  /* padding:40px; */
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  /* border:2px solid red; */
+  }
+  
+  .footerlinks{
+    display:flex;
+    flex-direction:row;
+  }
+  .feet {
+      padding:10px;
+  }
+  
+  a{
+    color:var(--brown);
+  }
+  a:hover{
+    color:var(--red1);
+  }
