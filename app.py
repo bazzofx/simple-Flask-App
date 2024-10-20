@@ -1,7 +1,11 @@
+from flask import Flask, redirect, url_for, render_template
 
-a_list = ["a","b","c","d"]
+app = Flask(__name__)
 
-new = a_list.append("e")
+@app.route("/<nameT>")
+def home(nameT):
+    return render_template("index.html",name=nameT)
 
 
-print(new)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=80)
