@@ -1,5 +1,6 @@
 from pytube import YouTube, Playlist
 import time
+import os
 #print("Type the URL of the video to download")
 #video_link = input("URL:")
 def downloadmp3Simple(video_link):
@@ -29,10 +30,12 @@ def downloadmp3(video_link):
             if not stream:
                 print("No audio stream found!")
                 return None
-            
-            file = stream.download(filename=f"{video.title}.mp3")
-            print(f"Successfully downloaded: {file}")
-            return file
+            file_name = f"{video.title}.mp3"
+            download_folder = ".\downloads"
+            file_path = os.path.join(download_folder, file_name)
+            stream.download(output_path=download_folder,filename=file_name)
+            print(f"Successfully downloaded: {file_path}")
+            return file_path
             
         except Exception as e:
             attempt += 1
@@ -51,7 +54,7 @@ def downloadmp3(video_link):
     return None
 
 
-# downloadmp3("https://www.youtube.com/watch?v=99j0zLuNhi8")
+#downloadmp3("https://www.youtube.com/watch?v=99j0zLuNhi8")
 
 # downloadmp3("https://www.youtube.com/watch?v=fBOSYnYAqM0&list=PLpqTN7k_5IA7MVQVzEYarY7fPd_ezSTTR&index=2") #Molejo bugado
 

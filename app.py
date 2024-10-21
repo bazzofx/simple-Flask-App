@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, send_file
 from pytube import YouTube
 from downloader import downloadmp3, downloadPlaylist
 app = Flask(__name__)
@@ -11,12 +11,13 @@ def home():
         action = request.form.get("action") #Downloading one video or multiple videos
         if url:  # Check if the URL is not empty
             if action == "Convert":
-                downloadmp3(url)
+                file_path = downloadmp3(url)
             elif action == "Download All":
-                downloadPlaylist(url)
+                file_path = downloadPlaylist(url)
         else:
              return render_template("index.html", error="Please enter a valid URL")
-        return render_template("index.html")  # Re-render the template after processing
+        #return render_template("index.html")  # Re-render the template after processing
+        return send_file(file_path, as_attachment=True)
     else:
         return render_template("index.html")
 
