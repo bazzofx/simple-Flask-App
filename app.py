@@ -1,17 +1,19 @@
 from flask import Flask, request, render_template
-from second import second
 from pytube import YouTube
-from downloader import downloadmp3
+from downloader import downloadmp3, downloadPlaylist
 app = Flask(__name__)
-app.register_blueprint(second,url_prefix="")
 
 @app.route("/", methods=["POST", "GET"])
 @app.route("/home", methods=["POST", "GET"])
 def home():
     if request.method == "POST":
         url = request.form.get("url")  # Use .get() to safely access form data
+        action = request.form.get("action") #Downloading one video or multiple videos
         if url:  # Check if the URL is not empty
-            downloadmp3(url)
+            if action == "Convert":
+                downloadmp3(url)
+            elif action == "Download All":
+                downloadPlaylist(url)
         else:
              return render_template("index.html", error="Please enter a valid URL")
         return render_template("index.html")  # Re-render the template after processing

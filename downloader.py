@@ -51,21 +51,15 @@ def downloadmp3(video_link):
     return None
 
 
-
-
-
-
-
 # downloadmp3("https://www.youtube.com/watch?v=99j0zLuNhi8")
 
-downloadmp3("https://www.youtube.com/watch?v=fBOSYnYAqM0&list=PLpqTN7k_5IA7MVQVzEYarY7fPd_ezSTTR&index=2") #Molejo bugado
+# downloadmp3("https://www.youtube.com/watch?v=fBOSYnYAqM0&list=PLpqTN7k_5IA7MVQVzEYarY7fPd_ezSTTR&index=2") #Molejo bugado
 
-def downloadPlaylist():
+def downloadPlaylist(url):
     p = Playlist('https://www.youtube.com/watch?v=mxpeK_fiaSA&list=PLpqTN7k_5IA7MVQVzEYarY7fPd_ezSTTR')
 
     for url in p.video_urls[:3]:
         print (f"Downloading {url}")
-        # url.streams.first().download()
         downloadmp3(url)
         print("------------------")
 
