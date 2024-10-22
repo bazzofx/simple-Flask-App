@@ -14,3 +14,11 @@ Line 272 & 273 to :
 r'a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&.*?\|\|\s*([a-z]+)',
 r'\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])\([a-z]\)',
 ```
+## Windows
+```
+mv /cypher.py /venv/lib/pytube/cypher.py
+```
+## Linux
+```
+mv /cypher.py /venv/lib/python3.12/site-packages/pytube/cypher.py
+```
