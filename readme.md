@@ -15,8 +15,9 @@ r'a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&.*?\|\|\s*([a-z]+)',
 r'\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])\([a-z]\)',
 ```
 
-```
+
 ## Windows
+The Cipher copy needs to be moved inside to the pytube dependency to fix the issue mentioned above on line 272 & 273
 ```
 mv cipher.py venv/lib/pytube/cipher.py
 ```
