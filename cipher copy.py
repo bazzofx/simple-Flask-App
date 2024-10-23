@@ -10,7 +10,7 @@
                                              
 
 This module contains all logic necessary to decipher the signature.
-
+replace this file
 YouTube's strategy to restrict downloading videos is to send a ciphered version
 of the signature to the client, along with the decryption algorithm obfuscated
 in JavaScript. For the clients to play the videos, JavaScript must take the
@@ -279,10 +279,11 @@ def get_throttling_function_name(js: str) -> str:
         # a.C && (b = a.get("n")) && (b = Bpa[0](b), a.set("n", b),
         # Bpa.length || iha("")) }};
         # In the above case, `iha` is the relevant function name
-    #    r'a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&\s*'    #---------old line fix as per https://github.com/pytube/pytube/issues/1707#issuecomment-1672149709
-    #    r'\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])?\([a-z]\)',           #---------old line fix as per https://github.com/pytube/pytube/issues/1707#issuecomment-1672149709
+       # r'a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&\s*'
+       # r'\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])?\([a-z]\)',
         r'a\.[a-zA-Z]\s*&&\s*\([a-z]\s*=\s*a\.get\("n"\)\)\s*&&.*?\|\|\s*([a-z]+)',
         r'\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])\([a-z]\)',
+
     ]
     logger.debug('Finding throttling function name')
     for pattern in function_patterns:
