@@ -1,0 +1,10 @@
+sudo apt update && sudo apt upgrade
+sudo apt install python3 -y && sudo apt install pip -y && sudo apt install python3-venv -y
+git clone https://github.com/bazzofx/youtubeDownload
+cd youtubeDownload/
+python3 -m venv venv 
+source venv/bin/activate
+pip install -r requirements.txt
+path="$(find . -name cipher.py)"
+mv cipher\ copy.py $path && head $path
+python3 app.py
