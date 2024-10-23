@@ -16,11 +16,11 @@ r'\([a-z]\s*=\s*([a-zA-Z0-9$]+)(\[\d+\])\([a-z]\)',
 ```
 ## Windows
 ```
-mv /cipher.py /venv/lib/pytube/cipher.py
+mv cipher.py venv/lib/pytube/cipher.py
 ```
 ## Linux
 ```
-mv /cipher.py venv/lib/python3.12/site-packages/pytube/cipher.py
+mv cipher.py venv/lib/python3.12/site-packages/pytube/cipher.py
 ```
 
 # Pytubefix
