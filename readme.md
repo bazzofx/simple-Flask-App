@@ -22,3 +22,10 @@ mv /cypher.py /venv/lib/pytube/cypher.py
 ```
 mv /cypher.py /venv/lib/python3.12/site-packages/pytube/cypher.py
 ```
+
+# Pytubefix
+
+## Get Po Token
+Get PO token using the below
+Save Token Cache on Server
+https://colab.research.google.com/drive/190BC9tEc0wTtCsfSbWHY-lT6amjSwFyG#scrollTo=M8mz73yeureD

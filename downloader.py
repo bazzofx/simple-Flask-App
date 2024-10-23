@@ -1,4 +1,4 @@
-from pytube import YouTube, Playlist
+from pytubefix import YouTube, Playlist
 import time
 import os
 #print("Type the URL of the video to download")
@@ -7,7 +7,9 @@ def downloadmp3Simple(video_link):
     try:
         # video_link = "https://www.youtube.com/watch?v=99j0zLuNhi8"
 
-        video = YouTube(video_link)
+        po_token = "MnQNdSyuaXQ_yA1NTrLxoqh4KozbGb_MOkjU3AbDfn6FJ3ohXbH4jicB9e5MsoMcKORH4SlvoK_g_QOYlQAvyfJvqrz-Hh4nEIAFRUzJoAhExxWO6oVRZ5fI3i5dEyfeTv5Do9TVWqtvcClTeQ7ny3hVEs7W8A=="
+        visitor_data ="Cgt1c3NPdTlwNEhOMCjp7-C4BjIKCgJVUxIEGgAgLg%3D%3D"
+        video = YouTube(video_link,po_token,visitor_data,use_po_token=True)
         stream = video.streams.filter(only_audio=True).first()
         print(stream)
         file = stream.download(filename=f"{video.title}.mp3")
